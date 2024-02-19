@@ -38,7 +38,7 @@ for name, model in models:
     train_accuracies.append(train_accuracy)
     st.write(f"{name} Training Accuracy: {train_accuracy:.4f}")  # Print training accuracy
 
-    predictions = model.predict(test_data)  # Use test_data for predictions
+    predictions = model.predict(test_data)  
     all_predictions[name] = predictions
 
 st.subheader("Explanation of Algorithm Choices")
@@ -62,4 +62,4 @@ all_results = pd.DataFrame(all_predictions)
 
 # Save the DataFrame to a CSV file
 filename = st.text_input("Enter filename for saving predictions:", "test_predictions.csv")
-all_results.to_csv(filename, index=False)  # Adjust filename as needed
+all_results.to_csv(filename, index=False) 
